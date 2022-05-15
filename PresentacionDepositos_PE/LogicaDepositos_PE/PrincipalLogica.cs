@@ -1,25 +1,33 @@
 ﻿using PersistenciaDepositos_PE;
 using EntidadesDepositos_PE;
+using EventosDepositos_PE;
 
 namespace LogicaDepositos_PE
 {
     public class PrincipalLogica
     {
+        public EventHandler<ProductoAgregadoEliminadoEventsArgs> productoAgregadoEliminadoHandler;
         public void AgregarElemento(string modelo, string marca, int numeroDeSerie, short añoFabricacion, int? pulgadas)
         {
             Pantalla pantalla = new Pantalla(modelo, marca, numeroDeSerie, añoFabricacion, pulgadas);
             SingletonListas.Instancia.pantallas.Add(pantalla);
+
+            this.productoAgregadoEliminadoHandler(this, new ProductoAgregadoEliminadoEventsArgs("Monitor", pantalla.Identificador));
         }
         public void AgregarElemento(string modelo, string marca, int numeroDeSerie, string descripcionProcesador, byte numMemoriaRAM, string fabricante)
         {
             Computadora computadora = new Computadora(modelo, marca, numeroDeSerie, descripcionProcesador, numMemoriaRAM.ValidarRAM(), fabricante);
             SingletonListas.Instancia.computadoras.Add(computadora);
+
+            this.productoAgregadoEliminadoHandler(this, new ProductoAgregadoEliminadoEventsArgs("Computadora", computadora.Identificador));
         }
         public bool EliminarElemento(string ID)
         {
             if (SingletonListas.Instancia.computadoras.Find(x => x.Identificador == ID) != null)
             {
                 SingletonListas.Instancia.computadoras.RemoveAll(x => x.Identificador == ID);
+                this.productoAgregadoEliminadoHandler(this, new ProductoAgregadoEliminadoEventsArgs("Computadora", ID));
+
                 return true;
             }
             else
@@ -27,6 +35,8 @@ namespace LogicaDepositos_PE
                 if (SingletonListas.Instancia.pantallas.Find(x => x.Identificador == ID) != null)
                 {
                     SingletonListas.Instancia.pantallas.RemoveAll(x => x.Identificador == ID);
+                    this.productoAgregadoEliminadoHandler(this, new ProductoAgregadoEliminadoEventsArgs("Monitor", ID));
+
                     return true;
                 }
             }
@@ -69,7 +79,7 @@ namespace LogicaDepositos_PE
             List<string> elementosString = new List<string>();
             List<Elemento> elementos = ObtenerListaElementos();
 
-            elementos.Sort();
+            elementos = elementos.OrderBy(x => x.Identificador).ToList();
 
             foreach (Elemento elemento in elementos)
             {

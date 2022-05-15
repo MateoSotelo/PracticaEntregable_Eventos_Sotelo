@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EventosDepositos_PE\EventosDepositos_PE.csproj" />
     <ProjectReference Include="..\LogicaDepositos_PE\LogicaDepositos_PE.csproj" />
   </ItemGroup>
 

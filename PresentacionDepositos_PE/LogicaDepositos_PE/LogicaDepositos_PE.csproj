@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EntidadesDepositos_PE\EntidadesDepositos_PE.csproj" />
+    <ProjectReference Include="..\EventosDepositos_PE\EventosDepositos_PE.csproj" />
     <ProjectReference Include="..\PersistenciaDepositos_PE\PersistenciaDepositos_PE.csproj" />
   </ItemGroup>
 

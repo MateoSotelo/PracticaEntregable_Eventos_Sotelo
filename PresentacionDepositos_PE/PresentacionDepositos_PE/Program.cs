@@ -1,8 +1,11 @@
 ﻿using LogicaDepositos_PE;
+using EventosDepositos_PE;
+using System.Threading;
 
 // See https://aka.ms/new-console-template for more information
 
 PrincipalLogica logica = new PrincipalLogica();
+logica.productoAgregadoEliminadoHandler += ProductoAgregadoEliminado;
 
 int entrada = 1;
 
@@ -79,6 +82,9 @@ void IngresarElemento(bool ingresarComputadora)
     {
         Console.Write("Ingresar año de Fabricacion");
         short añoFabricacion = short.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese fabricante");
+        string fabricante = Console.ReadLine();
     }
 }
 
@@ -97,5 +103,13 @@ void EliminarElemento()
     {
         Console.WriteLine("No se encontro el objeto");
     }
+}
+
+static void ProductoAgregadoEliminado(object? sender, ProductoAgregadoEliminadoEventsArgs e)
+{
+    Console.Clear();
+
+    Console.WriteLine($"Producto: {e.tipoProducto}, ID: {e.ID}");
+    Thread.Sleep(1500);
 }
 

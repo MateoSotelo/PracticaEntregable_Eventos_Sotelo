@@ -21,6 +21,16 @@
           "bin/placeholder/EntidadesDepositos_PE.dll": {}
         }
       },
+      "EventosDepositos_PE/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/EventosDepositos_PE.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EventosDepositos_PE.dll": {}
+        }
+      },
       "PersistenciaDepositos_PE/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -70,6 +80,11 @@
       "path": "../EntidadesDepositos_PE/EntidadesDepositos_PE.csproj",
       "msbuildProject": "../EntidadesDepositos_PE/EntidadesDepositos_PE.csproj"
     },
+    "EventosDepositos_PE/1.0.0": {
+      "type": "project",
+      "path": "../EventosDepositos_PE/EventosDepositos_PE.csproj",
+      "msbuildProject": "../EventosDepositos_PE/EventosDepositos_PE.csproj"
+    },
     "PersistenciaDepositos_PE/1.0.0": {
       "type": "project",
       "path": "../PersistenciaDepositos_PE/PersistenciaDepositos_PE.csproj",
@@ -79,6 +94,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "EntidadesDepositos_PE >= 1.0.0",
+      "EventosDepositos_PE >= 1.0.0",
       "PersistenciaDepositos_PE >= 1.0.0"
     ]
   },
@@ -116,6 +132,9 @@
           "projectReferences": {
             "C:\\Users\\msote\\OneDrive\\Documentos\\Repositorios\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\EntidadesDepositos_PE\\EntidadesDepositos_PE.csproj": {
               "projectPath": "C:\\Users\\msote\\OneDrive\\Documentos\\Repositorios\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\EntidadesDepositos_PE\\EntidadesDepositos_PE.csproj"
+            },
+            "C:\\Users\\msote\\OneDrive\\Documentos\\Repositorios\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\EventosDepositos_PE\\EventosDepositos_PE.csproj": {
+              "projectPath": "C:\\Users\\msote\\OneDrive\\Documentos\\Repositorios\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\EventosDepositos_PE\\EventosDepositos_PE.csproj"
             },
             "C:\\Users\\msote\\OneDrive\\Documentos\\Repositorios\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\PersistenciaDepositos_PE\\PersistenciaDepositos_PE.csproj": {
               "projectPath": "C:\\Users\\msote\\OneDrive\\Documentos\\Repositorios\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\PersistenciaDepositos_PE\\PersistenciaDepositos_PE.csproj"
