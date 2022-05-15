@@ -10,9 +10,9 @@ namespace LogicaDepositos_PE
             Pantalla pantalla = new Pantalla(modelo, marca, numeroDeSerie, añoFabricacion, pulgadas);
             SingletonListas.Instancia.pantallas.Add(pantalla);
         }
-        public void AgregarElemento(string modelo, string marca, int numeroDeSerie, string descripcionProcesador, tipoMemoriaRAM memoriaRAM, string fabricante)
+        public void AgregarElemento(string modelo, string marca, int numeroDeSerie, string descripcionProcesador, byte numMemoriaRAM, string fabricante)
         {
-            Computadora computadora = new Computadora(modelo, marca, numeroDeSerie, descripcionProcesador, memoriaRAM, fabricante);
+            Computadora computadora = new Computadora(modelo, marca, numeroDeSerie, descripcionProcesador, numMemoriaRAM.ValidarRAM(), fabricante);
             SingletonListas.Instancia.computadoras.Add(computadora);
         }
         public bool EliminarElemento(string ID)
@@ -39,14 +39,44 @@ namespace LogicaDepositos_PE
 
             foreach (Computadora computadora in SingletonListas.Instancia.computadoras)
             {
-                Descripciones.Add(computadora.Desribirse());
+                Descripciones.Add(computadora.Describirse());
             }
             foreach (Pantalla pantalla in SingletonListas.Instancia.pantallas)
             {
-                Descripciones.Add(pantalla.Desribirse());
+                Descripciones.Add(pantalla.Describirse());
             }
 
             return Descripciones;
+        }
+
+        public List<Elemento> ObtenerListaElementos()
+        {
+            List<Elemento> elementos = new List<Elemento>();
+
+            foreach (Pantalla pantalla in SingletonListas.Instancia.pantallas)
+            {
+                elementos.Add(pantalla);
+            }
+            foreach (Computadora computadora in SingletonListas.Instancia.computadoras)
+            {
+                elementos.Add(computadora);
+            }
+
+            return elementos;
+        }
+        public List<string> OrdenarListaPorTipoProducto()
+        {
+            List<string> elementosString = new List<string>();
+            List<Elemento> elementos = ObtenerListaElementos();
+
+            elementos.Sort();
+
+            foreach (Elemento elemento in elementos)
+            {
+                elementosString.Add($"{elemento.Identificacor}");
+            }
+
+            return elementosString;
         }
     }
 }

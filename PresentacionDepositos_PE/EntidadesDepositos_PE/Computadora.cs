@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace EntidadesDepositos_PE
 {
-    public enum tipoMemoriaRAM { DosGb, CuatroGb, OchoGb, DieciseisGb }
-    public class Computadora : Elemento
+    public enum tipoMemoriaRAM { DosGb, CuatroGb, OchoGb, DieciseisGb, Invalido}
+    public class Computadora : Elemento, IDescriptible
     {
         public string DescripcionProcesador { get; set; }
         public tipoMemoriaRAM MemoriaRAM { get; set; }
@@ -21,8 +21,7 @@ namespace EntidadesDepositos_PE
             this.MemoriaRAM = memoriaRAM;
             this.Fabricante = fabricante;
         }
-
-        public override string Desribirse()
+        public string Describirse()
         {
             return $"COMPUTADORA {Modelo}-{Marca}-{DescripcionProcesador} {MemoriaRAM.ToString()}-{Fabricante}";
         }
