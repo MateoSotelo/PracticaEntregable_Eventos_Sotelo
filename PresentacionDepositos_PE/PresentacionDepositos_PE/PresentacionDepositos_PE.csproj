@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LogicaDepositos_PE\LogicaDepositos_PE.csproj" />
+  </ItemGroup>
+
 </Project>

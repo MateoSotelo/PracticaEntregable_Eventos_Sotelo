@@ -1,4 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using LogicaDepositos_PE;
+
+// See https://aka.ms/new-console-template for more information
+
+PrincipalLogica logica = new PrincipalLogica();
 
 int entrada = 1;
 
@@ -32,9 +36,9 @@ while (entrada != 0)
 
 }
 
-static void ObtenerListaOrdenada()
+void ObtenerListaOrdenada()
 {
-    List<string> elementos = Logica.OrdenarListaPorTipoProducto();
+    List<string> elementos = logica.OrdenarListaPorTipoProducto();
 
     foreach (string elemento in elementos)
     {
@@ -42,9 +46,9 @@ static void ObtenerListaOrdenada()
     }
 }
 
-static void ObtenerDescripciones()
+void ObtenerDescripciones()
 {
-    List<string> descripciones = Logica.ObtenerDescripcionElementos();
+    List<string> descripciones = logica.ObtenerDescripcionElementos();
 
     foreach (string descripcion in descripciones)
     {
@@ -52,7 +56,7 @@ static void ObtenerDescripciones()
     }
 }
 
-static void IngresarElemento(bool ingresarComputadora)
+void IngresarElemento(bool ingresarComputadora)
 {
     Console.Write("Ingrese Modelo: ");
     string modelo = Console.ReadLine();
@@ -78,12 +82,12 @@ static void IngresarElemento(bool ingresarComputadora)
     }
 }
 
-static void EliminarElemento()
+void EliminarElemento()
 {
     Console.WriteLine("ingresar ID del elemento a eliminar: ");
     string ID = Console.ReadLine();
 
-    bool resultado = Logica.EliminarElemento(id);
+    bool resultado = logica.EliminarElemento(ID);
 
     if (resultado == true)
     {

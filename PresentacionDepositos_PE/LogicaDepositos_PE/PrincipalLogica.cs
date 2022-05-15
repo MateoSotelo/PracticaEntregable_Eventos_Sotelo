@@ -1,4 +1,4 @@
-﻿
+﻿using PersistenciaDepositos_PE;
 using EntidadesDepositos_PE;
 
 namespace LogicaDepositos_PE
@@ -17,16 +17,16 @@ namespace LogicaDepositos_PE
         }
         public bool EliminarElemento(string ID)
         {
-            if (SingletonListas.Instancia.computadoras.Find(x => x.Identificacor == ID) != null)
+            if (SingletonListas.Instancia.computadoras.Find(x => x.Identificador == ID) != null)
             {
-                SingletonListas.Instancia.computadoras.RemoveAll(x => x.Identificacor == ID);
+                SingletonListas.Instancia.computadoras.RemoveAll(x => x.Identificador == ID);
                 return true;
             }
             else
             {
-                if (SingletonListas.Instancia.pantallas.Find(x => x.Identificacor == ID) != null)
+                if (SingletonListas.Instancia.pantallas.Find(x => x.Identificador == ID) != null)
                 {
-                    SingletonListas.Instancia.pantallas.RemoveAll(x => x.Identificacor == ID);
+                    SingletonListas.Instancia.pantallas.RemoveAll(x => x.Identificador == ID);
                     return true;
                 }
             }
@@ -73,7 +73,7 @@ namespace LogicaDepositos_PE
 
             foreach (Elemento elemento in elementos)
             {
-                elementosString.Add($"{elemento.Identificacor}");
+                elementosString.Add($"{elemento.Identificador}");
             }
 
             return elementosString;
