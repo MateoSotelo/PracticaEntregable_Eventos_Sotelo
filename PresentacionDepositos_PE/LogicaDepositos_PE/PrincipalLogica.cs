@@ -119,7 +119,7 @@ namespace LogicaDepositos_PE
             for (int i = 0; i < elementos.Count; i++)
             {
                 bool Ultimo = i == elementos.Count() - 1? true: false;
-                this.productoAgregadoModificadoHandler(this, new ProductoAgregadoModificadoEventsArgs(Ultimo, elementosString[i],cantidadMonitores, cantidadComputadoras, cantidadMonitores / elementos.Count(), cantidadComputadoras / elementos.Count()));
+                this.productoAgregadoModificadoHandler(this, new ProductoAgregadoModificadoEventsArgs(Ultimo, elementosString[i],cantidadMonitores, cantidadComputadoras, (double)cantidadMonitores / (double)elementos.Count(), (double)cantidadComputadoras / (double)elementos.Count()));
             }
 
         }
