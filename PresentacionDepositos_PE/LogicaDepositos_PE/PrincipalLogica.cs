@@ -16,9 +16,16 @@ namespace LogicaDepositos_PE
             persistencia.GuardarListadoComputadoras(SingletonListas.Instancia.computadoras);
             persistencia.GuardarListadoMonitores(SingletonListas.Instancia.pantallas);
         }
+        public void ActualizarListados()
+        {
+            SingletonListas.Instancia.computadoras = persistencia.LeerListadoComputadoras();
+            SingletonListas.Instancia.pantallas = persistencia.LeerListadoMonitores();
+        }
         public void AgregarElemento(string modelo, string marca, int numeroDeSerie, short añoFabricacion, int? pulgadas)
         {
             Pantalla pantalla = new Pantalla(modelo, marca, numeroDeSerie, añoFabricacion, pulgadas);
+
+            ActualizarListados();
             SingletonListas.Instancia.pantallas.Add(pantalla);
             
             this.productoAgregadoEliminadoHandler(this, new ProductoAgregadoEliminadoEventsArgs("Monitor", pantalla.Identificador));
@@ -27,6 +34,8 @@ namespace LogicaDepositos_PE
         public void AgregarElemento(string modelo, string marca, int numeroDeSerie, string descripcionProcesador, byte numMemoriaRAM)
         {
             Computadora computadora = new Computadora(modelo, marca, numeroDeSerie, descripcionProcesador, numMemoriaRAM.ValidarRAM());
+
+            ActualizarListados();
             SingletonListas.Instancia.computadoras.Add(computadora);
             
             this.productoAgregadoEliminadoHandler(this, new ProductoAgregadoEliminadoEventsArgs("Computadora", computadora.Identificador));
@@ -34,6 +43,8 @@ namespace LogicaDepositos_PE
         }
         public bool EliminarElemento(string ID)
         {
+            ActualizarListados();
+
             if (SingletonListas.Instancia.computadoras.Find(x => x.Identificador == ID) != null)
             {
                 SingletonListas.Instancia.computadoras.RemoveAll(x => x.Identificador == ID);
@@ -60,6 +71,8 @@ namespace LogicaDepositos_PE
         {
             List<string> Descripciones = new List<string>();
 
+            ActualizarListados();
+
             foreach (Computadora computadora in SingletonListas.Instancia.computadoras)
             {
                 Descripciones.Add(computadora.Describirse());
@@ -75,6 +88,7 @@ namespace LogicaDepositos_PE
         public List<Elemento> ObtenerListaElementos()
         {
             List<Elemento> elementos = new List<Elemento>();
+            ActualizarListados();
 
             foreach (Pantalla pantalla in SingletonListas.Instancia.pantallas)
             {
