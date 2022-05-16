@@ -6,6 +6,7 @@ using System.Threading;
 
 PrincipalLogica logica = new PrincipalLogica();
 logica.productoAgregadoEliminadoHandler += ProductoAgregadoEliminado;
+logica.productoAgregadoModificadoHandler += ProdcutoAgregadoModificado;
 
 int entrada = 1;
 
@@ -16,7 +17,6 @@ while (entrada != 0)
     Console.WriteLine("Ingrese 1 si quiere ingresar un elemento");
     Console.WriteLine("Ingrese 2 si quiere eliminar un elemento");
     Console.WriteLine("Ingrese 3 si quiere imprmir las descripciones");
-    Console.WriteLine("Ingrese 4 si quiere imprimir la lista ordenada por tipo de producto");
     Console.WriteLine("Ingrese 0 si quiere cerrar la app");
 
     entrada = int.Parse(Console.ReadLine());
@@ -37,25 +37,9 @@ while (entrada != 0)
         case 3:
             ObtenerDescripciones();
             break;
-        case 4:
-            ObtenerListaOrdenada();
-            break;
     }
 
     Console.ReadKey();
-}
-
-void ObtenerListaOrdenada()
-{
-    Console.Clear();
-    Console.WriteLine("Lista ordenada por producto...");
-
-    List<string> elementos = logica.OrdenarListaPorTipoProducto();
-
-    foreach (string elemento in elementos)
-    {
-        Console.WriteLine(elemento);
-    }
 }
 
 void ObtenerDescripciones()
@@ -63,12 +47,7 @@ void ObtenerDescripciones()
     Console.Clear();
     Console.WriteLine("Descripciones de los elementos...");
 
-    List<string> descripciones = logica.ObtenerDescripcionElementos();
-
-    foreach (string descripcion in descripciones)
-    {
-        Console.WriteLine(descripcion);
-    }
+    logica.OrdenarListaPorTipoProducto();
 }
 
 void IngresarElemento(bool ingresarComputadora)
@@ -132,5 +111,20 @@ static void ProductoAgregadoEliminado(object? sender, ProductoAgregadoEliminadoE
 
     Console.WriteLine($"Producto: {e.tipoProducto}, ID: {e.ID}");
     Thread.Sleep(1500);
+}
+
+static void ProdcutoAgregadoModificado(object? sender, ProductoAgregadoModificadoEventsArgs e)
+{
+    if (e.Ultimo == true)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"Producto {e.Descripcion}, Total de Monitores {e.cantidadMonitores} - Porcentaje {e.porcentajeMonitores * 100}%,Total de Computadoras {e.cantidadComputadoras} - Porcentaje {e.porcentajeComputadoras * 100}%");
+    }
+    else
+    {
+        Console.WriteLine($"Producto {e.Descripcion}");
+    }
+
+    Console.ForegroundColor = ConsoleColor.White;
 }
 

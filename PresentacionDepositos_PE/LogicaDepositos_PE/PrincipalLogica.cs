@@ -8,6 +8,7 @@ namespace LogicaDepositos_PE
     public class PrincipalLogica
     {
         public EventHandler<ProductoAgregadoEliminadoEventsArgs> productoAgregadoEliminadoHandler;
+        public EventHandler<ProductoAgregadoModificadoEventsArgs> productoAgregadoModificadoHandler;
         Principal persistencia = new Principal();
 
         public void GuardarListados()
@@ -86,7 +87,7 @@ namespace LogicaDepositos_PE
 
             return elementos;
         }
-        public List<string> OrdenarListaPorTipoProducto()
+        public void OrdenarListaPorTipoProducto()
         {
             List<string> elementosString = new List<string>();
             List<Elemento> elementos = ObtenerListaElementos();
@@ -95,10 +96,18 @@ namespace LogicaDepositos_PE
 
             foreach (Elemento elemento in elementos)
             {
-                elementosString.Add($"{elemento.Identificador}");
+                elementosString.Add(elemento.Identificador);
             }
 
-            return elementosString;
+            int cantidadMonitores = SingletonListas.Instancia.pantallas.Count();
+            int cantidadComputadoras = SingletonListas.Instancia.computadoras.Count();
+
+            for (int i = 0; i < elementos.Count; i++)
+            {
+                bool Ultimo = i == elementos.Count() - 1? true: false;
+                this.productoAgregadoModificadoHandler(this, new ProductoAgregadoModificadoEventsArgs(Ultimo, elementosString[i],cantidadMonitores, cantidadComputadoras, cantidadMonitores / elementos.Count(), cantidadComputadoras / elementos.Count()));
+            }
+
         }
     }
 }
