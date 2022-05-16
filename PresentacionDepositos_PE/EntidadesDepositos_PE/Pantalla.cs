@@ -9,7 +9,7 @@ namespace EntidadesDepositos_PE
     public class Pantalla : Elemento, IDescriptible
     {
         public short AñoFabricacion { get; set; }
-        public bool Nuevo { get { return Nuevo; } set { Nuevo = AñoFabricacion == DateTime.Now.Year ? true : false; } }
+        public bool Nuevo { get; set; }
         public int? Pulgadas { get; set; }
         public Pantalla(string modelo, string marca, int numeroDeSerie, short añoFabricacion, int? pulgadas)
         {
@@ -17,6 +17,7 @@ namespace EntidadesDepositos_PE
             this.Marca = marca;
             this.NumeroDeSerie = numeroDeSerie;
             this.AñoFabricacion = añoFabricacion;
+            this.Nuevo = AñoFabricacion == DateTime.Now.Year ? true : false; // Si lo hago en el set, me da un error el json, imprime en bucle en consola
             this.Pulgadas = pulgadas;
         }
 

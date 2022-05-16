@@ -9,7 +9,6 @@ namespace EntidadesDepositos_PE
     public sealed class SingletonListas
     {
         private static SingletonListas instancia = new SingletonListas();
-
         public List<Pantalla> pantallas { get; set; }
         public List<Computadora> computadoras { get; set; }
         private SingletonListas() { pantallas = new List<Pantalla>(); computadoras = new List<Computadora>(); }
@@ -25,6 +24,5 @@ namespace EntidadesDepositos_PE
                 return instancia;
             }
         }
-
     }
 }

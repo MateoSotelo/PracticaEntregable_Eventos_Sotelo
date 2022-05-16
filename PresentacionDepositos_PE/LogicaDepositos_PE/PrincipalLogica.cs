@@ -4,22 +4,32 @@ using EventosDepositos_PE;
 
 namespace LogicaDepositos_PE
 {
+   
     public class PrincipalLogica
     {
         public EventHandler<ProductoAgregadoEliminadoEventsArgs> productoAgregadoEliminadoHandler;
+        Principal persistencia = new Principal();
+
+        public void GuardarListados()
+        {
+            persistencia.GuardarListadoComputadoras(SingletonListas.Instancia.computadoras);
+            persistencia.GuardarListadoMonitores(SingletonListas.Instancia.pantallas);
+        }
         public void AgregarElemento(string modelo, string marca, int numeroDeSerie, short añoFabricacion, int? pulgadas)
         {
             Pantalla pantalla = new Pantalla(modelo, marca, numeroDeSerie, añoFabricacion, pulgadas);
             SingletonListas.Instancia.pantallas.Add(pantalla);
-
+            
             this.productoAgregadoEliminadoHandler(this, new ProductoAgregadoEliminadoEventsArgs("Monitor", pantalla.Identificador));
+            GuardarListados();
         }
-        public void AgregarElemento(string modelo, string marca, int numeroDeSerie, string descripcionProcesador, byte numMemoriaRAM, string fabricante)
+        public void AgregarElemento(string modelo, string marca, int numeroDeSerie, string descripcionProcesador, byte numMemoriaRAM)
         {
-            Computadora computadora = new Computadora(modelo, marca, numeroDeSerie, descripcionProcesador, numMemoriaRAM.ValidarRAM(), fabricante);
+            Computadora computadora = new Computadora(modelo, marca, numeroDeSerie, descripcionProcesador, numMemoriaRAM.ValidarRAM());
             SingletonListas.Instancia.computadoras.Add(computadora);
-
+            
             this.productoAgregadoEliminadoHandler(this, new ProductoAgregadoEliminadoEventsArgs("Computadora", computadora.Identificador));
+            GuardarListados();
         }
         public bool EliminarElemento(string ID)
         {
@@ -27,6 +37,7 @@ namespace LogicaDepositos_PE
             {
                 SingletonListas.Instancia.computadoras.RemoveAll(x => x.Identificador == ID);
                 this.productoAgregadoEliminadoHandler(this, new ProductoAgregadoEliminadoEventsArgs("Computadora", ID));
+                GuardarListados();
 
                 return true;
             }
@@ -36,6 +47,7 @@ namespace LogicaDepositos_PE
                 {
                     SingletonListas.Instancia.pantallas.RemoveAll(x => x.Identificador == ID);
                     this.productoAgregadoEliminadoHandler(this, new ProductoAgregadoEliminadoEventsArgs("Monitor", ID));
+                    GuardarListados();
 
                     return true;
                 }

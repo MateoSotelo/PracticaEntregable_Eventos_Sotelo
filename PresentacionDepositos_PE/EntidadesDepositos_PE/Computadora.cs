@@ -11,19 +11,17 @@ namespace EntidadesDepositos_PE
     {
         public string DescripcionProcesador { get; set; }
         public tipoMemoriaRAM MemoriaRAM { get; set; }
-        public string Fabricante { get; set; }
-        public Computadora(string modelo, string marca, int numeroDeSerie, string descripcionProcesador, tipoMemoriaRAM memoriaRAM, string fabricante)
+        public Computadora(string modelo, string marca, int numeroDeSerie, string descripcionProcesador, tipoMemoriaRAM memoriaRAM)
         {
             this.Modelo = modelo;
             this.Marca = marca;
             this.NumeroDeSerie = numeroDeSerie;
             this.DescripcionProcesador = descripcionProcesador;
             this.MemoriaRAM = memoriaRAM;
-            this.Fabricante = fabricante;
         }
         public string Describirse()
         {
-            return $"COMPUTADORA {Modelo}-{Marca}-{DescripcionProcesador} {MemoriaRAM.ToString()}-{Fabricante}";
+            return $"COMPUTADORA {Modelo}-{Marca}-{DescripcionProcesador} {MemoriaRAM.ToString()}";
         }
     }
 }

@@ -9,9 +9,9 @@ namespace PersistenciaDepositos_PE
         const string path = @"C:\Users\msote\OneDrive\Escritorio\ListasJson\";
         public void GuardarListadoComputadoras(List<Computadora> computadoras)
         {
-            if (!File.Exists(path))
+            if (!File.Exists(path + "computadoras.txt"))
             {
-                File.Create(path);
+                File.Create(path + "computadoras.txt");
                 using (StreamWriter writer = new StreamWriter(path + "computadoras.txt", false))
                 {
                     string json = JsonConvert.SerializeObject(computadoras);
@@ -30,7 +30,7 @@ namespace PersistenciaDepositos_PE
         public List<Computadora> LeerListadoComputadoras()
         {
             List<Computadora> computadoras = new List<Computadora>();
-            if (File.Exists(path))
+            if (File.Exists(path + "computadoras.txt"))
             {
                 using (StreamReader reader = new StreamReader(path + "computadoras.txt"))
                 {
@@ -45,9 +45,9 @@ namespace PersistenciaDepositos_PE
         }
         public void GuardarListadoMonitores(List<Pantalla> monitores)
         {
-            if (!File.Exists(path))
+            if (!File.Exists(path + "monitores.txt"))
             {
-                File.Create(path);
+                File.Create(path + "monitores.txt");
                 using (StreamWriter writer = new StreamWriter(path + "monitores.txt", false))
                 {
                     string json = JsonConvert.SerializeObject(monitores);
@@ -66,7 +66,7 @@ namespace PersistenciaDepositos_PE
         public List<Pantalla> LeerListadoMonitores()
         {
             List<Pantalla> monitores = new List<Pantalla>();
-            if (File.Exists(path))
+            if (File.Exists(path + "monitores.txt"))
             {
                 using (StreamReader reader = new StreamReader(path + "monitores.txt"))
                 {

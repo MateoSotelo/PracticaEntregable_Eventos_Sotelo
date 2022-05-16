@@ -19,10 +19,15 @@ while (entrada != 0)
     Console.WriteLine("Ingrese 4 si quiere imprimir la lista ordenada por tipo de producto");
     Console.WriteLine("Ingrese 0 si quiere cerrar la app");
 
+    entrada = int.Parse(Console.ReadLine());
+
     switch (entrada)
     {
         case 1:
-            Console.Write("Ingrese 1 si quiere ingresar una computadoram sino ingresara un monitor: ");
+            Console.Clear();
+            Console.WriteLine("Ingresando un elemento...");
+
+            Console.Write("Ingrese 1 si quiere ingresar una computadora, sino ingresara un monitor: ");
             bool ingresarComputadora = int.Parse(Console.ReadLine()) == 1 ? true : false;
             IngresarElemento(ingresarComputadora);
             break;
@@ -37,10 +42,14 @@ while (entrada != 0)
             break;
     }
 
+    Console.ReadKey();
 }
 
 void ObtenerListaOrdenada()
 {
+    Console.Clear();
+    Console.WriteLine("Lista ordenada por producto...");
+
     List<string> elementos = logica.OrdenarListaPorTipoProducto();
 
     foreach (string elemento in elementos)
@@ -51,6 +60,9 @@ void ObtenerListaOrdenada()
 
 void ObtenerDescripciones()
 {
+    Console.Clear();
+    Console.WriteLine("Descripciones de los elementos...");
+
     List<string> descripciones = logica.ObtenerDescripcionElementos();
 
     foreach (string descripcion in descripciones)
@@ -67,7 +79,7 @@ void IngresarElemento(bool ingresarComputadora)
     Console.Write("Ingrese Marca: ");
     string marca = Console.ReadLine();
 
-    Console.Write("Ingrese edad: ");
+    Console.Write("Ingrese numero de serie: ");
     int numeroSerie = int.Parse(Console.ReadLine());
 
     if (ingresarComputadora == true)
@@ -77,19 +89,27 @@ void IngresarElemento(bool ingresarComputadora)
 
         Console.Write("Ingrese memoria RAM: ");
         byte numMemoriaRAM = byte.Parse(Console.ReadLine());
+
+        logica.AgregarElemento(modelo, marca, numeroSerie, descripcionProcesador, numMemoriaRAM);
     }
     else
     {
-        Console.Write("Ingresar año de Fabricacion");
+        Console.Write("Ingresar año de Fabricacion: ");
         short añoFabricacion = short.Parse(Console.ReadLine());
 
-        Console.Write("Ingrese fabricante");
-        string fabricante = Console.ReadLine();
+        Console.Write("Ingresar cantidad de pulgadas (opcional): ");
+        int? pulgadas = int.Parse(Console.ReadLine());
+
+        logica.AgregarElemento(modelo, marca, numeroSerie, añoFabricacion,pulgadas);
     }
+
+    
 }
 
 void EliminarElemento()
 {
+    Console.WriteLine("Eliminando un elemento...");
+
     Console.WriteLine("ingresar ID del elemento a eliminar: ");
     string ID = Console.ReadLine();
 
@@ -98,6 +118,7 @@ void EliminarElemento()
     if (resultado == true)
     {
         Console.WriteLine("Objeto eliminado");
+        logica.EliminarElemento(ID);
     }
     else
     {

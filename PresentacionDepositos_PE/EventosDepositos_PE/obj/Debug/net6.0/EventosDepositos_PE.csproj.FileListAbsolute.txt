@@ -1,0 +1,12 @@
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EventosDepositos_PE\bin\Debug\net6.0\EventosDepositos_PE.deps.json
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EventosDepositos_PE\bin\Debug\net6.0\EventosDepositos_PE.dll
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EventosDepositos_PE\bin\Debug\net6.0\EventosDepositos_PE.pdb
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EventosDepositos_PE\obj\Debug\net6.0\EventosDepositos_PE.csproj.AssemblyReference.cache
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EventosDepositos_PE\obj\Debug\net6.0\EventosDepositos_PE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EventosDepositos_PE\obj\Debug\net6.0\EventosDepositos_PE.AssemblyInfoInputs.cache
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EventosDepositos_PE\obj\Debug\net6.0\EventosDepositos_PE.AssemblyInfo.cs
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EventosDepositos_PE\obj\Debug\net6.0\EventosDepositos_PE.csproj.CoreCompileInputs.cache
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EventosDepositos_PE\obj\Debug\net6.0\EventosDepositos_PE.dll
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EventosDepositos_PE\obj\Debug\net6.0\refint\EventosDepositos_PE.dll
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EventosDepositos_PE\obj\Debug\net6.0\EventosDepositos_PE.pdb
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EventosDepositos_PE\obj\Debug\net6.0\ref\EventosDepositos_PE.dll

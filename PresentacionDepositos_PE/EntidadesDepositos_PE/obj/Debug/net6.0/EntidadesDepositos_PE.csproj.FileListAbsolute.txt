@@ -1,0 +1,12 @@
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EntidadesDepositos_PE\bin\Debug\net6.0\EntidadesDepositos_PE.deps.json
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EntidadesDepositos_PE\bin\Debug\net6.0\EntidadesDepositos_PE.dll
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EntidadesDepositos_PE\bin\Debug\net6.0\EntidadesDepositos_PE.pdb
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EntidadesDepositos_PE\obj\Debug\net6.0\EntidadesDepositos_PE.csproj.AssemblyReference.cache
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EntidadesDepositos_PE\obj\Debug\net6.0\EntidadesDepositos_PE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EntidadesDepositos_PE\obj\Debug\net6.0\EntidadesDepositos_PE.AssemblyInfoInputs.cache
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EntidadesDepositos_PE\obj\Debug\net6.0\EntidadesDepositos_PE.AssemblyInfo.cs
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EntidadesDepositos_PE\obj\Debug\net6.0\EntidadesDepositos_PE.csproj.CoreCompileInputs.cache
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EntidadesDepositos_PE\obj\Debug\net6.0\EntidadesDepositos_PE.dll
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EntidadesDepositos_PE\obj\Debug\net6.0\refint\EntidadesDepositos_PE.dll
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EntidadesDepositos_PE\obj\Debug\net6.0\EntidadesDepositos_PE.pdb
+C:\Users\msote\OneDrive\Documentos\Repositorios\PracticaEntregable_Eventos_Sotelo\PresentacionDepositos_PE\EntidadesDepositos_PE\obj\Debug\net6.0\ref\EntidadesDepositos_PE.dll
