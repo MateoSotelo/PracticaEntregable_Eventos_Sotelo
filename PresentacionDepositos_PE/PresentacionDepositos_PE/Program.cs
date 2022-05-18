@@ -81,8 +81,6 @@ void IngresarElemento(bool ingresarComputadora)
 
         logica.AgregarElemento(modelo, marca, numeroSerie, añoFabricacion,pulgadas);
     }
-
-    
 }
 
 void EliminarElemento()
@@ -110,7 +108,7 @@ static void ProductoAgregadoEliminado(object? sender, ProductoAgregadoEliminadoE
     Console.Clear();
 
     Console.WriteLine($"Producto: {e.tipoProducto}, ID: {e.ID}");
-    Thread.Sleep(1500);
+    Thread.Sleep(800);
 }
 
 static void ProdcutoAgregadoModificado(object? sender, ProductoAgregadoModificadoEventsArgs e)

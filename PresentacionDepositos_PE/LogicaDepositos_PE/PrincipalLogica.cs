@@ -36,10 +36,18 @@ namespace LogicaDepositos_PE
             Computadora computadora = new Computadora(modelo, marca, numeroDeSerie, descripcionProcesador, numMemoriaRAM.ValidarRAM());
 
             ActualizarListados();
-            SingletonListas.Instancia.computadoras.Add(computadora);
-            
-            this.productoAgregadoEliminadoHandler(this, new ProductoAgregadoEliminadoEventsArgs("Computadora", computadora.Identificador));
-            GuardarListados();
+
+            if (computadora.MemoriaRAM != tipoMemoriaRAM.Invalido)
+            {
+                SingletonListas.Instancia.computadoras.Add(computadora);
+                this.productoAgregadoEliminadoHandler(this, new ProductoAgregadoEliminadoEventsArgs("Computadora", computadora.Identificador));
+                GuardarListados();
+            }
+            else
+            {
+                throw new Exception("Memoria RAM invalida");
+            }   
+
         }
         public bool EliminarElemento(string ID)
         {
