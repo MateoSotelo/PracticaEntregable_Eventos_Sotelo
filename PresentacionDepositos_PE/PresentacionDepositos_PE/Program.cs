@@ -4,6 +4,8 @@ using System.Threading;
 
 // See https://aka.ms/new-console-template for more information
 
+//OJO!! USAR PROYECTOS NET FRAMEWORK, NO NET CORE
+
 PrincipalLogica logica = new PrincipalLogica();
 logica.productoAgregadoEliminadoHandler += ProductoAgregadoEliminado;
 logica.productoAgregadoModificadoHandler += ProdcutoAgregadoModificado;

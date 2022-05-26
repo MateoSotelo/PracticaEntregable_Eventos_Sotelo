@@ -7,6 +7,7 @@ namespace PersistenciaDepositos_PE
     public class Principal
     {
         const string path = @"C:\Users\msote\OneDrive\Escritorio\ListasJson\";
+        //USAR APPDOMAIN.CURRENTDOMAIN.BASEDIRECTORY PARA TOMAR LA CARPETA DE LA SOLUCION 
         public void GuardarListadoComputadoras(List<Computadora> computadoras)
         {
             if (!File.Exists(path + "computadoras.txt"))

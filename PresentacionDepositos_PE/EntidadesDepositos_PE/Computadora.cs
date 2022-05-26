@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntidadesDepositos_PE
 {
-    public enum tipoMemoriaRAM { DosGb, CuatroGb, OchoGb, DieciseisGb, Invalido}
+    public enum tipoMemoriaRAM { DosGb, CuatroGb, OchoGb, DieciseisGb, Invalido} //LOS VALORES DE ENUM PODRIAN SER 2,4,8,16 PARA SER CONSECUENTES CON LO QUE ALMACENAN
     public class Computadora : Elemento, IDescriptible
     {
         public string DescripcionProcesador { get; set; }

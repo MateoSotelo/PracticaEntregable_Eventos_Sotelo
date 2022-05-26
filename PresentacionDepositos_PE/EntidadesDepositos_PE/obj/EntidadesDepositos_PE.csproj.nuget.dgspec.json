@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\msote\\OneDrive\\Documentos\\Repositorios\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\EntidadesDepositos_PE\\EntidadesDepositos_PE.csproj": {}
+    "E:\\REPOSITORIOS\\UCSE\\ejercicio-deposito\\sotelo\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\EntidadesDepositos_PE\\EntidadesDepositos_PE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\msote\\OneDrive\\Documentos\\Repositorios\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\EntidadesDepositos_PE\\EntidadesDepositos_PE.csproj": {
+    "E:\\REPOSITORIOS\\UCSE\\ejercicio-deposito\\sotelo\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\EntidadesDepositos_PE\\EntidadesDepositos_PE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\msote\\OneDrive\\Documentos\\Repositorios\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\EntidadesDepositos_PE\\EntidadesDepositos_PE.csproj",
+        "projectUniqueName": "E:\\REPOSITORIOS\\UCSE\\ejercicio-deposito\\sotelo\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\EntidadesDepositos_PE\\EntidadesDepositos_PE.csproj",
         "projectName": "EntidadesDepositos_PE",
-        "projectPath": "C:\\Users\\msote\\OneDrive\\Documentos\\Repositorios\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\EntidadesDepositos_PE\\EntidadesDepositos_PE.csproj",
-        "packagesPath": "C:\\Users\\msote\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\msote\\OneDrive\\Documentos\\Repositorios\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\EntidadesDepositos_PE\\obj\\",
+        "projectPath": "E:\\REPOSITORIOS\\UCSE\\ejercicio-deposito\\sotelo\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\EntidadesDepositos_PE\\EntidadesDepositos_PE.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "E:\\REPOSITORIOS\\UCSE\\ejercicio-deposito\\sotelo\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\EntidadesDepositos_PE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\msote\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

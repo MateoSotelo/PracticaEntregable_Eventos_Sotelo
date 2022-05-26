@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ok5cGruBCjbJsZI/451S46ZrTwlcnrXA5F0RJYmuhg3s+SGKqOuwzYFrKt89772+4gmV3Hey3ov4lv8LIBwOFA==",
+  "dgSpecHash": "Ouyy/YNvnGWzyRrhN4ypfZiM0D79E/c1aoUTzfFRaYwG8Yqh6QE8pbWvwMd4RZmGPTdrxwELX9kv2nJjeHgYUQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\msote\\OneDrive\\Documentos\\Repositorios\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\LogicaDepositos_PE\\LogicaDepositos_PE.csproj",
+  "projectFilePath": "E:\\REPOSITORIOS\\UCSE\\ejercicio-deposito\\sotelo\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\LogicaDepositos_PE\\LogicaDepositos_PE.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\msote\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\Usuario\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

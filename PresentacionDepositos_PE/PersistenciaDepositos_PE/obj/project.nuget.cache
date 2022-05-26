@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hEeqwYcf6/FhB/6Mj/7D4igdUeA5/hPouTWxuakpBt82tzkb6We6+pKZO7vK0hipZKRuxTGlM7MoM9quhhnGhQ==",
+  "dgSpecHash": "lVARCcQmZDGf26OEn40+27RuxQn8vR0rBE/i8gpo1o1L7OB2cCtsq5AQggzziOa/rMU3TUNo8evLulK8l3XkJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\msote\\OneDrive\\Documentos\\Repositorios\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\PersistenciaDepositos_PE\\PersistenciaDepositos_PE.csproj",
+  "projectFilePath": "E:\\REPOSITORIOS\\UCSE\\ejercicio-deposito\\sotelo\\PracticaEntregable_Eventos_Sotelo\\PresentacionDepositos_PE\\PersistenciaDepositos_PE\\PersistenciaDepositos_PE.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\msote\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\Usuario\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }
